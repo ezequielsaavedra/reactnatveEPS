@@ -122,11 +122,6 @@ const styles = StyleSheet.create({
     padding: 5,
     justifyContent: "space-between",
     alignItems: "center",
-    shadowColor: "black",
-    shadowOpacity: 0.3,
-    shadowOffset: { width: 0, height: 1 },
-    shadowRadius: 2,
-    elevation: 3,
   },
   itemStyle: {
     color: "#DCCA2C",
