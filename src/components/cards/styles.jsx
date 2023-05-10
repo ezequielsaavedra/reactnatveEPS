@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import colors from "../../constants/colors";
 
 const styles = StyleSheet.create({
     renderItemStyle:{
@@ -6,13 +7,13 @@ const styles = StyleSheet.create({
         marginTop: 15,
         marginBottom: 15,
         borderRadius: 5,
-        backgroundColor: "#161515"
+        backgroundColor: colors.black
     },
     itemStyle:{
-        borderColor: "#FFFFFF",
+        borderColor: colors.white,
         borderWidth: 2,
         borderRadius: 10,
-        color: "#FFFFFF",
+        color: colors.white,
         height: 25,
         width: "auto",
         paddingLeft: 25,
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
         paddingTop: 2,
         marginLeft: 25,
         marginBottom: 5,
-        marginTop: 10
+        marginTop: 10,
     },
     imagenStyle:{
         width: 125,

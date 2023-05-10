@@ -1,6 +1,8 @@
 import Card from "../../components/cards"
 import Header from '../../components/header';
 import { View } from 'react-native'
+import styles from "./styles";
+import { useFonts } from "expo-font"
 
 class cards {
     constructor(nombre, imagen, id, fecha, episodios) {
@@ -12,18 +14,20 @@ class cards {
     }
 }
 
-const anime1 = new cards("Demon Slayer", require("../../../assets/img/KnY.webp"), 1, "2019 - actualidad", 55)
-const anime2 = new cards("Shingeki no Kyojin", require("../../../assets/img/SnK.jpg"), 2, "2013 - actualidad", 88)
-const anime3 = new cards("Shigatsu wa Kimi no uso", require("../../../assets/img/SwKnU.webp"), 3, "2014 - 2015", 22)
+const anime1 = new cards("Hagane no Renkinjutsushi", require("../../../assets/img/fma.webp"), 1, "2009 - 2010", 64)
+const anime2 = new cards("Shin Seiki Evangerion", require("../../../assets/img/nge.webp"), 2, "1995 - 1996", 26)
+const anime3 = new cards("Hantā Hantā", require("../../../assets/img/hxh.webp"), 3, "2011 - 2014", 148)
 
 const animes = [anime1, anime2, anime3]
 
-const Descubrir = () => {
 
+
+
+const Descubrir = () => {
     return (
-        <View>
-            <Header title={"Descubrir"} />
-            <Card animes={animes} />
+        <View style={styles.content}>
+            <Header title={"Descubrir"}/>
+            <Card animes={animes}  newStyles={styles.textCards} />
         </View>
     )
 }

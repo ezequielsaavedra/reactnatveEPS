@@ -1,6 +1,8 @@
 import Card from "../../components/cards"
 import Header from '../../components/header';
 import { View } from 'react-native'
+import styles from "./styles";
+import { useFonts } from "expo-font"
 
 class cards {
     constructor(nombre, imagen, id, fecha, episodios) {
@@ -19,11 +21,11 @@ const anime3 = new cards("Shigatsu wa Kimi no uso", require("../../../assets/img
 const animes = [anime1, anime2, anime3]
 
 const Favoritos = () => {
-
+    
     return (
-        <View>
+        <View style={styles.content}>
             <Header title={"Favoritos"} />
-            <Card animes={animes} />
+            <Card animes={animes}  newStyles={styles.textCards}  />
         </View>
     )
 }

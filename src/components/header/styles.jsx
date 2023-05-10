@@ -1,14 +1,15 @@
 import { StyleSheet } from "react-native";
+import colors from "../../constants/colors";
 
 const styles = StyleSheet.create ({
     header:{
         height: 80,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#161515"
+        backgroundColor: colors.black
     },
     titleHeader: {
-        color: "#E5C223",
+        color: colors.yellowText,
         alignContent: "center",
         fontSize:20
     }
