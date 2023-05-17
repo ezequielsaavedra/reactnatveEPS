@@ -17,12 +17,13 @@ const renderItem = ({ item }) => (
 );
 
 const Card = ({ animes }) => {
+
     return (
-        <View>
+        <View style={styles.container}>
             <FlatList
                 data={animes}
                 renderItem={renderItem}
-                keyExtractor={anime => anime.id}
+                keyExtractor={item => item.id}
             />
         </View>
     )
