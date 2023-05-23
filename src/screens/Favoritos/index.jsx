@@ -24,7 +24,7 @@ const Favoritos = ({ navigation }) => {
     return (
         <View style={styles.content} >
             <Card animes={animes}/>
-            <Footer navigation={navigation}/>
+            {/* <Footer navigation={navigation}/> */}
         </View>
     )
 }

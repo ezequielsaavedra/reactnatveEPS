@@ -1,45 +1,64 @@
 import Descubrir from '../screens/Descubrir'
 import Favoritos from '../screens/Favoritos'
+import { FontAwesome } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native'
 import React from 'react'
-import { StyleSheet, } from 'react-native'
+import { View } from 'react-native'
 import colors from '../constants/colors'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Navigator = () => {
 
-    const Stack = createNativeStackNavigator()
+    const BottomTab = createBottomTabNavigator()
 
 
     return (
         <NavigationContainer >
-            < Stack.Navigator initialRouteName='Descubrir' >
-                <Stack.Screen name='Descubrir' component={Descubrir} options={{
-                    title: "Descubrir", headerStyle: {
-                        backgroundColor: colors.black,
-                    }, headerTintColor: colors.yellowText,
-                    headerTitleStyle: {
-                        fontFamily: "SourceSerifPro"
-                    },headerTitleAlign: "center",
-                    animationTypeForReplace: "pop",
-                    animation: "slide_from_left"
+            < BottomTab.Navigator initialRouteName='Descubrir' screenOptions={{
+                headerStyle: {
+                    backgroundColor: colors.black,
+                    borderBottomWidth: 0.5
+                }, headerTintColor: colors.yellowText,
+                headerTitleStyle: {
+                    fontFamily: "SourceSerifPro"
+                }, headerTitleAlign: "center",
+                tabBarStyle: {
+                    backgroundColor: colors.black
+                }, tabBarInactiveTintColor: colors.yellowText,
+                tabBarActiveTintColor: colors.yellowText,
+                tabBarActiveBackgroundColor: colors.backgroundApp,
+                tabBarLabelStyle: {
+                    fontFamily: "SourceSerifPro"
+                }
+            }}>
+                <BottomTab.Screen name='Descubrir' component={Descubrir} options={{
+                    title: "Descubrir",
+                    tabBarIcon: () => (
+                        <View>
+                            <FontAwesome
+                                name="search"
+                                size={24}
+                                style={{color: colors.yellowText}}
+                            />
+                        </View>
+                    ),
                 }} />
-                <Stack.Screen name='Favoritos' component={Favoritos} options={{
-                    title: "Favoritos", headerStyle: {
-                        backgroundColor: colors.black,
-                    }, headerTintColor: colors.yellowText,
-                    headerTitleStyle: {
-                        fontFamily: "SourceSerifPro"
-                    },headerTitleAlign: "center",
+                <BottomTab.Screen name='Favoritos' component={Favoritos} options={{
+                    title: "Favoritos",
                     headerBackVisible: false,
-                    animationTypeForReplace: "pop",
-                    animation: "slide_from_right"
+                    tabBarIcon: () => (
+                        <View>
+                            <FontAwesome
+                                name="heart-o"
+                                size={24}
+                                style={{color: colors.yellowText}}
+                            />
+                        </View>
+                    ),
                 }} />
-            </ Stack.Navigator>
+            </ BottomTab.Navigator>
         </NavigationContainer>
     )
 }
 
 export default Navigator
-
-const styles = StyleSheet.create({});
