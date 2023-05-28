@@ -1,7 +1,8 @@
 import { StatusBar, StyleSheet, View } from 'react-native';
 
-import Navigator from './src/navigation/Navigator';
-import colors from './src/constants/colors';
+import MainNavigator from './src/navigation/MainNavigator';
+import { Provider } from 'react-redux';
+import store from './src/store';
 import { useFonts } from "expo-font"
 
 export default function App() {
@@ -15,10 +16,12 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle="light-content" />
-      <Navigator/>
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" />
+        <MainNavigator />
+      </View>
+    </Provider>
   );
 }
 
@@ -26,5 +29,4 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   }
-
 });

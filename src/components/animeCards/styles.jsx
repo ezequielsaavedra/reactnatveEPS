@@ -7,8 +7,7 @@ const styles = StyleSheet.create({
     },
     renderItemStyle:{
         flexDirection: "row",
-        marginTop: 15,
-        marginBottom: 15,
+        marginTop: "9%",
         borderRadius: 5,
         backgroundColor: colors.black
     },
@@ -17,19 +16,22 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderRadius: 10,
         color: colors.white,
-        height: 25,
-        width: "auto",
-        paddingLeft: 25,
-        paddingRight: 25,
-        paddingTop: 2,
-        marginLeft: 25,
-        marginBottom: 5,
-        marginTop: 10,
+        height: "auto",
+        width: "100%",
+        maxWidth: 240,
+        paddingLeft: "5%",
+        paddingTop: 3,
+        marginLeft: "10%",
+        marginBottom: "5%",
+        marginTop: "6.5%",
         fontFamily: "SourceSerifPro"
+    },
+    imagenContainer: {
+        height: 175
     },
     imagenStyle:{
         width: 125,
-        height: 125,
+        height: "100%",
         borderRadius: 5
     }
 })
