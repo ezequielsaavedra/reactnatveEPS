@@ -15,7 +15,7 @@ const AnimeCard = ({ animes, selectAnime }) => {
             <View>
                 <Text style={styles.itemStyle}>{item.name}</Text>
                 <Text style={styles.itemStyle}>{item.date}</Text>
-                <Text style={styles.itemStyle}>Cantidad de episodios: {item.episodes}</Text>
+                <Text style={styles.itemStyle}>Duracion: {item.duracion}</Text>
             </View>
         </TouchableOpacity>
     );
