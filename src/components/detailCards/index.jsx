@@ -17,7 +17,7 @@ const DetailCard = ({ selectedAnime }) => {
             <View>
                 <Text style={styles.itemStyle}>{selectedAnime.name}</Text>
                 <Text style={styles.itemStyle}>{selectedAnime.date}</Text>
-                <Text style={styles.itemStyle}>Duracion: {selectedAnime.episodes}</Text>
+                <Text style={styles.itemStyle}>Duracion: {selectedAnime.duracion}</Text>
             </View>
         </View>
         </View>
