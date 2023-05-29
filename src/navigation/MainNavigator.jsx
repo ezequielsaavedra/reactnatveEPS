@@ -1,4 +1,4 @@
-import Descubrir from '../screens/Descubrir'
+import DescubrirNavigator from './DescubrirNavigator';
 import FavoritosNavigator from './FavoritosNavigator';
 import FinalizadoNavigator from './FinalizadoNavigator';
 import { FontAwesome } from '@expo/vector-icons';
@@ -31,13 +31,6 @@ const MainNavigator = () => {
             }
         }} >
             < BottomTab.Navigator initialRouteName='Descubrir' screenOptions={{
-                headerStyle: {
-                    backgroundColor: colors.black,
-                    borderBottomWidth: 0.5
-                }, headerTintColor: colors.yellowText,
-                headerTitleStyle: {
-                    fontFamily: "SourceSerifPro"
-                }, headerTitleAlign: "center",
                 tabBarStyle: {
                     backgroundColor: colors.black
                 }, tabBarInactiveTintColor: colors.yellowText,
@@ -47,8 +40,9 @@ const MainNavigator = () => {
                     fontFamily: "SourceSerifPro"
                 }
             }}>
-                <BottomTab.Screen name='Descubrir' component={Descubrir} options={{
+                <BottomTab.Screen name='DescubrirNavigator' component={DescubrirNavigator} options={{
                     title: "Descubrir",
+                    headerShown: false,
                     tabBarIcon: () => (
                         <View>
                             <FontAwesome
