@@ -7,9 +7,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const WatchListNavigator = () => {
 
     const Stack = createNativeStackNavigator();
-
     return (
         <Stack.Navigator
+            initialRouteName='Watch List'
             screenOptions={{
                 headerStyle: {
                     backgroundColor: colors.black,

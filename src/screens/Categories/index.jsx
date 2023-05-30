@@ -9,9 +9,6 @@ import { useRoute } from '@react-navigation/native';
 const Categories = ({ navigation }) => {
     const route = useRoute()
     const animes = useSelector((state) => state.animes.animes)
-    const animesFavoritos = animes.filter((anime) => anime.fav)
-    const animesWatchList = animes.filter((anime) => anime.watching)
-    const animesFinished = animes.filter((anime) => anime.finished)
     const dispatch = useDispatch()
     const selectAnime = (anime) => {
         dispatch(selectedAnime(anime.id));
@@ -20,27 +17,26 @@ const Categories = ({ navigation }) => {
         })
     }
     
-    if(route.name === "Favoritos"){
+    const getAnime = () => {
+        if(route.name === "Favoritos") {
+            return (animes.filter((anime) => anime.fav))
+        } else if (route.name === "Watch List") {
+            return (animes.filter((anime) => anime.watching))
+        } else if  (route.name === "Ya Visto") {
+            return (animes.filter((anime) => anime.finished))
+        }
+    }
+
+    const setAnime = getAnime()
+
         return (
             <View style={styles.content} >
-                <AnimeCard animes={animesFavoritos} selectAnime={selectAnime} />
-            </View>
-        )
-    } else if (route.name === "Watch List") {
-        return (
-            <View style={styles.content} >
-                <AnimeCard animes={animesWatchList} selectAnime={selectAnime} />
-            </View>
-        )
-    } else if (route.name === "Ya Visto") {
-        return (
-            <View style={styles.content} >
-                <AnimeCard animes={animesFinished} selectAnime={selectAnime} />
+                <AnimeCard animes={setAnime} selectAnime={selectAnime} />
             </View>
         )
     }
 
-}
+
 
 
 export default Categories

@@ -13,23 +13,7 @@ const MainNavigator = () => {
     const BottomTab = createBottomTabNavigator()
 
     return (
-        <NavigationContainer screenOptions={{
-            headerStyle: {
-                backgroundColor: colors.black,
-                borderBottomWidth: 0.5
-            }, headerTintColor: colors.yellowText,
-            headerTitleStyle: {
-                fontFamily: "SourceSerifPro"
-            }, headerTitleAlign: "center",
-            tabBarStyle: {
-                backgroundColor: colors.black
-            }, tabBarInactiveTintColor: colors.yellowText,
-            tabBarActiveTintColor: colors.yellowText,
-            tabBarActiveBackgroundColor: "#1b1c1c",
-            tabBarLabelStyle: {
-                fontFamily: "SourceSerifPro"
-            }
-        }} >
+        <NavigationContainer >
             < BottomTab.Navigator initialRouteName='Descubrir' screenOptions={{
                 tabBarStyle: {
                     backgroundColor: colors.black
