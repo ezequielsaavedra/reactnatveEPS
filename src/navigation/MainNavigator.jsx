@@ -1,83 +1,41 @@
-import DescubrirNavigator from './DescubrirNavigator';
-import FavoritosNavigator from './FavoritosNavigator';
-import FinalizadoNavigator from './FinalizadoNavigator';
-import { FontAwesome } from '@expo/vector-icons';
-import { NavigationContainer } from '@react-navigation/native'
+import Categories from '../screens/Categories';
+import DetailScreen from '../screens/DetailScreen';
 import React from 'react'
-import { View } from 'react-native'
-import WatchListNavigator from './WatchListNavigator';
-import colors from '../constants/colors'
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import TabNavigator from './TabNavigator';
+import colors from '../constants/colors';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const MainNavigator = () => {
-    const BottomTab = createBottomTabNavigator()
 
+    const Stack = createNativeStackNavigator();
     return (
-        <NavigationContainer >
-            < BottomTab.Navigator initialRouteName='Descubrir' screenOptions={{
-                tabBarStyle: {
-                    backgroundColor: colors.black
-                }, tabBarInactiveTintColor: colors.yellowText,
-                tabBarActiveTintColor: colors.yellowText,
-                tabBarActiveBackgroundColor: "#1b1c1c",
-                tabBarLabelStyle: {
+        <Stack.Navigator
+            initialRouteName='Watch List'
+            screenOptions={{
+                headerStyle: {
+                    backgroundColor: colors.black,
+                    borderBottomWidth: 0.5
+                }, headerTintColor: colors.yellowText,
+                headerTitleStyle: {
                     fontFamily: "SourceSerifPro"
-                }
+                }, headerTitleAlign: "center",
+                animation: "none"
             }}>
-                <BottomTab.Screen name='DescubrirNavigator' component={DescubrirNavigator} options={{
-                    title: "Descubrir",
-                    headerShown: false,
-                    tabBarIcon: () => (
-                        <View>
-                            <FontAwesome
-                                name="search"
-                                size={24}
-                                style={{ color: colors.yellowText }}
-                            />
-                        </View>
-                    ),
-                }} />
-                <BottomTab.Screen name='WatchList' component={WatchListNavigator} options={{
-                    title: "Watch List",
-                    headerShown: false,
-                    tabBarIcon: () => (
-                        <View>
-                            <FontAwesome
-                                name="tv"
-                                size={24}
-                                style={{ color: colors.yellowText }}
-                            />
-                        </View>
-                    ),
-                }} />
-                <BottomTab.Screen name='YaVisto' component={FinalizadoNavigator} options={{
-                    title: "YaVisto",
-                    headerShown: false,
-                    tabBarIcon: () => (
-                        <View>
-                            <FontAwesome
-                                name="flag-checkered"
-                                size={24}
-                                style={{ color: colors.yellowText }}
-                            />
-                        </View>
-                    ),
-                }} />
-                <BottomTab.Screen name='FavoritosNavigator' component={FavoritosNavigator} options={{
-                    title: "Favoritos",
-                    headerShown: false,
-                    tabBarIcon: () => (
-                        <View>
-                            <FontAwesome
-                                name="heart-o"
-                                size={24}
-                                style={{ color: colors.yellowText }}
-                            />
-                        </View>
-                    ),
-                }} />
-            </ BottomTab.Navigator>
-        </NavigationContainer>
+            <Stack.Screen
+                name="Watch List"
+                component={TabNavigator}
+                options={{
+                    title: "Watch List"
+                }}
+            />
+            <Stack.Screen
+                name="Details"
+                component={DetailScreen}
+                options={({ route }) => ({
+                    title: route.params.name,
+                })}
+            />
+        </Stack.Navigator>
     )
 }
 
