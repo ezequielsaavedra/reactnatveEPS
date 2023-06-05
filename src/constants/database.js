@@ -1,0 +1,1 @@
+export const URL_API = "https://reactnativeeps-default-rtdb.firebaseio.com/"

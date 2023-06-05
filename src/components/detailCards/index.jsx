@@ -6,20 +6,20 @@ import styles from './styles';
 const DetailCard = ({ selectedAnime }) => {
 
     return (
-        <View style={styles.container}>
-            <View style={styles.renderItemStyle}>
+        <View style={styles.renderItemStyle}>
             <View style={styles.imagenContainer}>
                 <Image
                     source={{ uri: `${selectedAnime.img}` }}
                     style={styles.imagenStyle}
                 />
             </View>
-            <View>
-                <Text style={styles.itemStyle}>{selectedAnime.name}</Text>
-                <Text style={styles.itemStyle}>{selectedAnime.date}</Text>
-                <Text style={styles.itemStyle}>Duracion: {selectedAnime.duracion}</Text>
+            <View style={styles.descripcionContainer}>
+                <Text style={[styles.descripcionStyle, styles.title]}>{selectedAnime.name}</Text>
+                <Text style={styles.descripcionStyle}>{selectedAnime.descripcion}</Text>
+                <Text style={styles.descripcionStyle}>{selectedAnime.date}</Text>
+                <Text style={styles.descripcionStyle}>Duracion: {selectedAnime.duracion}</Text>
+                <Text style={styles.descripcionStyle}>IMDb: {selectedAnime.rating}</Text>
             </View>
-        </View>
         </View>
     )
 }

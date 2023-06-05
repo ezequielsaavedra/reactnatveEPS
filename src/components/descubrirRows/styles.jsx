@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         margin: 2
     },
     imagenStyle: {
-        width: 125,
+        width: 135,
         height: "100%",
         borderRadius: 5
     }

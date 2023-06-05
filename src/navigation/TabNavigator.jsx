@@ -1,16 +1,24 @@
 import Categories from '../screens/Categories';
-import Descubrir from '../screens/Descubrir';
+import DescubrirNavigator from './DescubrirNavigator';
 import { FontAwesome } from '@expo/vector-icons';
 import React from 'react'
 import { View } from 'react-native'
 import colors from '../constants/colors'
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
+const BottomTab = createBottomTabNavigator()
+
 const TabNavigator = () => {
-    const BottomTab = createBottomTabNavigator()
 
     return (
             < BottomTab.Navigator initialRouteName='Descubrir' screenOptions={{
+                headerStyle: {
+                    backgroundColor: colors.black,
+                    borderBottomWidth: 0.5
+                }, headerTintColor: colors.yellowText,
+                headerTitleStyle: {
+                    fontFamily: "SourceSerifPro"
+                }, headerTitleAlign: "center",
                 tabBarStyle: {
                     backgroundColor: colors.black
                 }, tabBarInactiveTintColor: colors.yellowText,
@@ -20,7 +28,7 @@ const TabNavigator = () => {
                     fontFamily: "SourceSerifPro"
                 }
             }}>
-                <BottomTab.Screen name='Descubrir' component={Descubrir} options={{
+                <BottomTab.Screen name='DescubrirNavigator' component={DescubrirNavigator} options={{
                     title: "Descubrir",
                     headerShown: false,
                     tabBarIcon: () => (
@@ -35,7 +43,6 @@ const TabNavigator = () => {
                 }} />
                 <BottomTab.Screen name='Watch List' component={Categories} options={{
                     title: "Watch List",
-                    headerShown: false,
                     tabBarIcon: () => (
                         <View>
                             <FontAwesome
@@ -47,8 +54,7 @@ const TabNavigator = () => {
                     ),
                 }} />
                 <BottomTab.Screen name='Ya Visto' component={Categories} options={{
-                    title: "YaVisto",
-                    headerShown: false,
+                    title: "Ya Visto",
                     tabBarIcon: () => (
                         <View>
                             <FontAwesome
@@ -61,7 +67,6 @@ const TabNavigator = () => {
                 }} />
                 <BottomTab.Screen name='Favoritos' component={Categories} options={{
                     title: "Favoritos",
-                    headerShown: false,
                     tabBarIcon: () => (
                         <View>
                             <FontAwesome

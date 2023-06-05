@@ -1,16 +1,15 @@
-import DetailScreen from '../screens/DetailScreen';
-import React from 'react'
-import TabNavigator from './TabNavigator';
+import Descubrir from '../screens/Descubrir';
+import DescubrirCategories from '../screens/DescubrirCategories';
 import colors from '../constants/colors';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
-const MainNavigator = () => {
+const DescubrirNavigator = () => {
 
     return (
         <Stack.Navigator
-            initialRouteName='TabNavigator'
+            initialRouteName='Descubrir'
             screenOptions={{
                 headerStyle: {
                     backgroundColor: colors.black,
@@ -22,15 +21,15 @@ const MainNavigator = () => {
                 animation: "none"
             }}>
             <Stack.Screen
-                name="TabNavigator"
-                component={TabNavigator}
+                name="Descubrir"
+                component={Descubrir}
                 options={{
-                    headerShown: false
+                    title: "Descubrir"
                 }}
             />
             <Stack.Screen
-                name="Details"
-                component={DetailScreen}
+                name="DescubrirCategories"
+                component={DescubrirCategories}
                 options={({ route }) => ({
                     title: route.params.name,
                 })}
@@ -39,4 +38,4 @@ const MainNavigator = () => {
     )
 }
 
-export default MainNavigator
+export default DescubrirNavigator

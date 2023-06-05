@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
         height: "auto",
         width: "100%",
         maxWidth: 240,
+        minWidth: 200,
         paddingLeft: "5%",
         paddingTop: 3,
         marginLeft: "10%",
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
         height: 175
     },
     imagenStyle:{
-        width: 125,
+        width: 135,
         height: "100%",
         borderRadius: 5
     }

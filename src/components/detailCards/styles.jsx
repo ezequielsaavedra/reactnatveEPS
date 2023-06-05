@@ -2,37 +2,34 @@ import { StyleSheet } from "react-native";
 import colors from "../../constants/colors";
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
     renderItemStyle:{
-        flexDirection: "row",
-        marginTop: "9%",
-        borderRadius: 5,
-        backgroundColor: colors.black
+        flex: 1,
+        marginTop: "9%",        
     },
-    itemStyle:{
-        borderColor: colors.white,
-        borderWidth: 2,
-        borderRadius: 10,
+    descripcionContainer: {
+        margin: "4%"
+    },
+    descripcionStyle:{
         color: colors.white,
         height: "auto",
         width: "100%",
-        maxWidth: 240,
-        paddingLeft: "5%",
         paddingTop: 3,
-        marginLeft: "10%",
-        marginBottom: "5%",
-        marginTop: "6.5%",
-        fontFamily: "SourceSerifPro"
+        marginTop: "4%",
+        fontFamily: "SourceSerifPro",
+        fontSize: 20
+    },
+    title: {
+        fontSize: 30,
+        color: colors.yellowText,
+        textDecorationLine: "underline",
+        
     },
     imagenContainer: {
-        height: 175
+        flex: 1
     },
     imagenStyle:{
-        width: 125,
+        width: "100%",
         height: "100%",
-        borderRadius: 5
     }
 })
 
