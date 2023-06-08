@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { add_anime_fav, remove_anime_fav } from '../../store/actions/fav.action';
 import { useDispatch, useSelector } from "react-redux";
 
 import DetailCard from '../../components/detailCards'

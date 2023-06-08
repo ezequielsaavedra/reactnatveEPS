@@ -1,5 +1,7 @@
 import { Image, Text, View } from 'react-native'
 
+import AddModal from '../addModal';
+import FavIcon from '../favIcon';
 import React from 'react'
 import styles from './styles';
 
@@ -12,6 +14,8 @@ const DetailCard = ({ selectedAnime }) => {
                     source={{ uri: `${selectedAnime.img}` }}
                     style={styles.imagenStyle}
                 />
+                <FavIcon selectedAnime={selectedAnime} />
+                <AddModal selectedAnime={selectedAnime}/>
             </View>
             <View style={styles.descripcionContainer}>
                 <Text style={[styles.descripcionStyle, styles.title]}>{selectedAnime.name}</Text>

@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
+import AddButton from "../../components/addButton";
 import AnimeCard from "../../components/animeCards"
 import { View } from 'react-native'
 import { selectedAnime } from "../../store/actions/anime.action";
@@ -8,7 +9,9 @@ import { useRoute } from '@react-navigation/native';
 
 const Categories = ({ navigation }) => {
     const route = useRoute()
-    const animes = useSelector((state) => state.animes.animes)
+    const animesFav = useSelector((state) => state.favAnimes.favAnimes)
+    const animesFinished = useSelector((state) => state.finishedAnimes.finishedAnimes)
+    const animesWatchList = useSelector((state) => state.watchListAnimes.watchListAnimes)
     const dispatch = useDispatch()
     const selectAnime = (anime) => {
         dispatch(selectedAnime(anime.id));
@@ -19,11 +22,11 @@ const Categories = ({ navigation }) => {
     
     const getAnime = () => {
         if(route.name === "Favoritos") {
-            return (animes.filter((anime) => anime.fav))
+            return (animesFav)
         } else if (route.name === "Watch List") {
-            return (animes.filter((anime) => anime.watching))
+            return (animesWatchList)
         } else if  (route.name === "Ya Visto") {
-            return (animes.filter((anime) => anime.finished))
+            return (animesFinished)
         } else {
             return [];
         }
@@ -31,11 +34,22 @@ const Categories = ({ navigation }) => {
 
     const setAnime = getAnime()
 
+
+    if(setAnime.length > 0) {
         return (
             <View style={styles.content} >
                 <AnimeCard animes={setAnime} selectAnime={selectAnime} />
             </View>
         )
+    } else {
+        return (
+            <View style={styles.content} >
+                <AddButton navigation={navigation}/>
+            </View>
+        )
+    }
+
+
     }
 
 

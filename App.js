@@ -1,4 +1,4 @@
-import { StatusBar, StyleSheet, View } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 
 import MainNavigator from './src/navigation/MainNavigator';
 import { NavigationContainer } from '@react-navigation/native'
@@ -18,18 +18,19 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
         <NavigationContainer>
-          <MainNavigator/>
+          <MainNavigator />
         </NavigationContainer>
-      </View>
+      </SafeAreaView>
     </Provider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: "black"
   }
 });
