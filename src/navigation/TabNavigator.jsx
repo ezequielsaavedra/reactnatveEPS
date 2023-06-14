@@ -1,3 +1,4 @@
+import AccountButton from '../components/accountButton';
 import Categories from '../screens/Categories';
 import DescubrirNavigator from './DescubrirNavigator';
 import { FontAwesome } from '@expo/vector-icons';
@@ -11,13 +12,13 @@ const BottomTab = createBottomTabNavigator()
 const TabNavigator = () => {
 
     return (
-            < BottomTab.Navigator initialRouteName='Descubrir' screenOptions={{
+            < BottomTab.Navigator initialRouteName='Descubrir' screenOptions={({ navigation }) =>( {
                 headerStyle: {
                     backgroundColor: colors.black,
-                    borderBottomWidth: 0.5
+                    borderBottomWidth: 0.5,
                 }, headerTintColor: colors.yellowText,
                 headerTitleStyle: {
-                    fontFamily: "SourceSerifPro"
+                    fontFamily: "SourceSerifPro",
                 }, headerTitleAlign: "center",
                 tabBarStyle: {
                     backgroundColor: colors.black
@@ -26,8 +27,14 @@ const TabNavigator = () => {
                 tabBarActiveBackgroundColor: "#1b1c1c",
                 tabBarLabelStyle: {
                     fontFamily: "SourceSerifPro"
+                },
+                headerRight: () => (
+                    <AccountButton navigation={navigation}/>
+                ),
+                headerRightContainerStyle: {
+                    marginRight: "4%"
                 }
-            }}>
+            })}>
                 <BottomTab.Screen name='DescubrirNavigator' component={DescubrirNavigator} options={{
                     title: "Descubrir",
                     headerShown: false,

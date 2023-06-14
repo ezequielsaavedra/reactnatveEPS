@@ -8,13 +8,12 @@ import styles from "./styles";
 
 const Descubrir = ({ navigation }) => {
     const animes = useSelector((state) => state.animes.animes)
-    const animesDescubrir = animes.filter((anime) => anime.descubrir)
     const filterAnimesByCategory = (animes, category) => {
         return animes.filter(anime => anime.categoria === category);
     };
-    const animesTrending = filterAnimesByCategory(animesDescubrir, "Trending");
-    const animesSeries = filterAnimesByCategory(animesDescubrir, "Series");
-    const animesPeliculas = filterAnimesByCategory(animesDescubrir, "Peliculas");
+    const animesTrending = filterAnimesByCategory(animes, "Trending");
+    const animesSeries = filterAnimesByCategory(animes, "Series");
+    const animesPeliculas = filterAnimesByCategory(animes, "Peliculas");
 
     const dispatch = useDispatch()
     const selectAnime = (anime) => {

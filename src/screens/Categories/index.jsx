@@ -19,13 +19,13 @@ const Categories = ({ navigation }) => {
             name: anime.name
         })
     }
-    
+
     const getAnime = () => {
-        if(route.name === "Favoritos") {
+        if (route.name === "Favoritos") {
             return (animesFav)
         } else if (route.name === "Watch List") {
             return (animesWatchList)
-        } else if  (route.name === "Ya Visto") {
+        } else if (route.name === "Ya Visto") {
             return (animesFinished)
         } else {
             return [];
@@ -35,22 +35,18 @@ const Categories = ({ navigation }) => {
     const setAnime = getAnime()
 
 
-    if(setAnime.length > 0) {
-        return (
-            <View style={styles.content} >
+
+    return (
+        <View style={styles.content} >
+            {setAnime.length > 0 ? (
                 <AnimeCard animes={setAnime} selectAnime={selectAnime} />
-            </View>
-        )
-    } else {
-        return (
-            <View style={styles.content} >
-                <AddButton navigation={navigation}/>
-            </View>
-        )
-    }
+            ) : (
+                <AddButton navigation={navigation} />
+            )}
+        </View>
+    )
+}
 
-
-    }
 
 
 

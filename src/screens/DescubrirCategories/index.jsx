@@ -20,11 +20,11 @@ const DescubrirCategories = ({ navigation }) => {
 
     const getAnime = () => {
         if (route.params.name === "Trending") {
-            return (animes.filter((anime) => anime.descubrir && anime.categoria === route.params.name))
+            return (animes.filter((anime) =>  anime.categoria === route.params.name))
         } else if (route.params.name === "Series") {
-            return (animes.filter((anime) => anime.descubrir && anime.categoria === route.params.name))
+            return (animes.filter((anime) =>  anime.categoria === route.params.name))
         } else if (route.params.name === "Peliculas") {
-            return (animes.filter((anime) => anime.descubrir && anime.categoria === route.params.name))
+            return (animes.filter((anime) =>  anime.categoria === route.params.name))
         } else {
             return [];
         }

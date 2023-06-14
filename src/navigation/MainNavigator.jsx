@@ -1,3 +1,4 @@
+import Account from '../screens/Account';
 import DetailScreen from '../screens/DetailScreen';
 import React from 'react'
 import TabNavigator from './TabNavigator';
@@ -19,7 +20,7 @@ const MainNavigator = () => {
                 headerTitleStyle: {
                     fontFamily: "SourceSerifPro"
                 }, headerTitleAlign: "center",
-                animation: "none"
+                animation: "none",
             }}>
             <Stack.Screen
                 name="TabNavigator"
@@ -34,6 +35,13 @@ const MainNavigator = () => {
                 options={({ route }) => ({
                     title: route.params.name,
                 })}
+            />
+            <Stack.Screen
+                name="Account"
+                component={Account}
+                // options={({ route }) => ({
+                //     title: route.params.name,
+                // })}
             />
         </Stack.Navigator>
     )

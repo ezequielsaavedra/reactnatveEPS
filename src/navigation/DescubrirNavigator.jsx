@@ -1,3 +1,4 @@
+import AccountButton from '../components/accountButton';
 import Descubrir from '../screens/Descubrir';
 import DescubrirCategories from '../screens/DescubrirCategories';
 import colors from '../constants/colors';
@@ -10,7 +11,7 @@ const DescubrirNavigator = () => {
     return (
         <Stack.Navigator
             initialRouteName='Descubrir'
-            screenOptions={{
+            screenOptions={ ({ navigation }) =>({
                 headerStyle: {
                     backgroundColor: colors.black,
                     borderBottomWidth: 0.5
@@ -18,8 +19,11 @@ const DescubrirNavigator = () => {
                 headerTitleStyle: {
                     fontFamily: "SourceSerifPro"
                 }, headerTitleAlign: "center",
-                animation: "none"
-            }}>
+                animation: "none",
+                headerRight: () => (
+                    <AccountButton navigation={navigation}/>
+                ),
+            })}>
             <Stack.Screen
                 name="Descubrir"
                 component={Descubrir}
