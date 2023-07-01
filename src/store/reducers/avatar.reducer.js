@@ -1,16 +1,24 @@
-import { ADD_AVATAR } from "../actions/avatar.action";
+import { ADD_AVATAR, DELETE_AVATAR } from "../actions/avatar.action";
 
 const initialState = {
     avatar: null
 };
 
-const AvatarReducer = (state = initialState, action) => {
-    if (action.type === ADD_AVATAR) {
-        const avatar = { ...action.avatar };
-        return {  ...state, avatar: avatar };
-    } else {
-        return state;
+const avatarReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case ADD_AVATAR:
+            return {
+                ...state,
+                avatar: action.payload
+            };
+        case DELETE_AVATAR:
+            return {
+                ...state,
+                avatar: null
+            };
+        default:
+            return state;
     }
 };
 
-export default AvatarReducer;
+export default avatarReducer;

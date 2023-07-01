@@ -1,4 +1,5 @@
 import Account from '../screens/Account';
+import AuthNavigation from './AuthNavigation';
 import DetailScreen from '../screens/DetailScreen';
 import React from 'react'
 import TabNavigator from './TabNavigator';
@@ -38,10 +39,7 @@ const MainNavigator = () => {
             />
             <Stack.Screen
                 name="Account"
-                component={Account}
-                // options={({ route }) => ({
-                //     title: route.params.name,
-                // })}
+                component={AuthNavigation}
             />
         </Stack.Navigator>
     )

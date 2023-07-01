@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.backgroundApp,
     },
-    buttonContainer:{
+    buttonAddContainer:{
         alignItems: "center",
         justifyContent: "center",
         alignSelf: "center",
@@ -16,6 +16,20 @@ const styles = StyleSheet.create({
         position:"absolute",
         marginTop: "50%",
         width: "41%"
+    },
+    container: {
+        flexDirection: "row",
+    },
+    buttonContainer:{
+        alignItems: "center",
+        justifyContent: "center",
+        alignSelf: "center",
+        borderColor: colors.yellowText,
+        borderWidth: 1,
+        borderRadius: 100,
+        width: "41%",
+        height:"40%",
+        margin: "5%"
     },
     text: {
         color: colors.yellowText

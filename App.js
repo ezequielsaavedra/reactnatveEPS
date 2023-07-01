@@ -1,4 +1,5 @@
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
+import { initFav, initFin, initWatch } from './src/db';
 
 import MainNavigator from './src/navigation/MainNavigator';
 import { NavigationContainer } from '@react-navigation/native'
@@ -15,6 +16,23 @@ export default function App() {
   if (!loaded) {
     return null;
   }
+
+  initFav()
+    .then(() => console.log("base creada 1"))
+    .catch(err => {
+      console.log(err.message)
+    })
+  initFin()
+    .then(() => console.log("base creada 2"))
+    .catch(err => {
+      console.log(err.message)
+    })
+  initWatch()
+    .then(() => console.log("base creada 3"))
+    .catch(err => {
+      console.log(err.message)
+    })
+
 
   return (
     <Provider store={store}>

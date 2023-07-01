@@ -9,16 +9,19 @@ import { useRoute } from '@react-navigation/native';
 
 const Categories = ({ navigation }) => {
     const route = useRoute()
+    const dispatch = useDispatch()
+
     const animesFav = useSelector((state) => state.favAnimes.favAnimes)
     const animesFinished = useSelector((state) => state.finishedAnimes.finishedAnimes)
     const animesWatchList = useSelector((state) => state.watchListAnimes.watchListAnimes)
-    const dispatch = useDispatch()
+
     const selectAnime = (anime) => {
         dispatch(selectedAnime(anime.id));
         navigation.navigate("Details", {
             name: anime.name
         })
     }
+
 
     const getAnime = () => {
         if (route.name === "Favoritos") {
@@ -33,8 +36,6 @@ const Categories = ({ navigation }) => {
     }
 
     const setAnime = getAnime()
-
-
 
     return (
         <View style={styles.content} >
