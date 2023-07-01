@@ -1,0 +1,2 @@
+export const URL_AUTH_SIGNIN = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAafBijfdjBXmKgYedOsx_LXJofs-CsqKw"
+export const URL_AUTH_SIGNUP =  "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAafBijfdjBXmKgYedOsx_LXJofs-CsqKw"

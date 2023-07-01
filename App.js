@@ -1,8 +1,7 @@
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { initFav, initFin, initWatch } from './src/db';
 
-import MainNavigator from './src/navigation/MainNavigator';
-import { NavigationContainer } from '@react-navigation/native'
+import MainNavigator from "./src/navigation";
 import { Provider } from 'react-redux';
 import store from './src/store';
 import { useFonts } from "expo-font"
@@ -38,9 +37,7 @@ export default function App() {
     <Provider store={store}>
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <NavigationContainer>
           <MainNavigator />
-        </NavigationContainer>
       </SafeAreaView>
     </Provider>
   );

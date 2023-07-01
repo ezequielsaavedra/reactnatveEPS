@@ -9,13 +9,16 @@ import {
     View,
 } from "react-native";
 import React, { useState } from 'react';
+import { signIn, signUp } from "../../store/actions/auth.action";
 
 import colors from "../../constants/colors";
 import styles from './styles';
+import { useDispatch } from "react-redux";
 
 const AuthScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const dispatch = useDispatch()
 
     const handleEmailChange = (text) => {
         setEmail(text);
@@ -26,13 +29,11 @@ const AuthScreen = () => {
     };
 
     const handleRegister = () => {
-        // Lógica para registrar al usuario con el correo y contraseña proporcionados
-        console.log('Registrarse', email, password);
+        dispatch(signUp(email, password))
     };
 
     const handleLogin = () => {
-        // Lógica para iniciar sesión con el correo y contraseña proporcionados
-        console.log('Iniciar sesión', email, password);
+        dispatch(signIn(email, password))
     };
 
     return (

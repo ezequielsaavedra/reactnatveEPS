@@ -7,12 +7,10 @@ export const addAvatar = (photo) => {
         try {
             const fileName = photo.split('/').pop();
             const newPath = FileSystem.documentDirectory + fileName;
-
             await FileSystem.moveAsync({
                 from: photo,
                 to: newPath
             });
-
             dispatch({
                 type: ADD_AVATAR,
                 payload: newPath
@@ -28,7 +26,6 @@ export const DELETE_AVATAR = 'DELETE_AVATAR';
 export const deleteAvatar = () => {
     return async (dispatch, getState) => {
         const { avatar } = getState().avatar;
-
         try {
             await FileSystem.deleteAsync(avatar);
             dispatch({

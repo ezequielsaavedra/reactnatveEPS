@@ -1,6 +1,7 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 
 import AnimeReducer from "./reducers/anime.reducer";
+import AuthReducer from "./reducers/auth.reducer";
 import AvatarReducer from "./reducers/avatar.reducer";
 import FavReducer from "./reducers/fav.reducer";
 import FinishedReducer from "./reducers/finished.reducer";
@@ -12,7 +13,8 @@ const RootReducer = combineReducers({
     favAnimes: FavReducer,
     watchListAnimes: WatchListReducer,
     finishedAnimes: FinishedReducer,
-    avatar: AvatarReducer
+    avatar: AvatarReducer,
+    auth: AuthReducer
 });
 
 export default createStore(RootReducer, applyMiddleware(thunk));

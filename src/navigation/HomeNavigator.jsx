@@ -1,5 +1,4 @@
 import Account from '../screens/Account';
-import AuthNavigation from './AuthNavigation';
 import DetailScreen from '../screens/DetailScreen';
 import React from 'react'
 import TabNavigator from './TabNavigator';
@@ -8,7 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
 
-const MainNavigator = () => {
+const HomeNavigator = () => {
 
     return (
         <Stack.Navigator
@@ -39,10 +38,10 @@ const MainNavigator = () => {
             />
             <Stack.Screen
                 name="Account"
-                component={AuthNavigation}
+                component={Account}
             />
         </Stack.Navigator>
     )
 }
 
-export default MainNavigator
+export default HomeNavigator
