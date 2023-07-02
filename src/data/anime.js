@@ -2,7 +2,7 @@ export const ANIME = [
     {
         id: "1",
         name: "Fullmetal Alchemist",
-        img: "https://pics.filmaffinity.com/Fullmetal_Alchemist_Brotherhood_Serie_de_TV-748146576-large.jpg",
+        img: "https://somoskudasai.com/wp-content/uploads/2021/09/Visual-5-3.jpg",
         date: "2009 - 2010",
         duracion: "64 episodios",
         categoria: "Series",
@@ -12,7 +12,7 @@ export const ANIME = [
     {
         id: "2",
         name: "Neon Genesis Evangelion",
-        img: "https://pics.filmaffinity.com/Neon_Genesis_Evangelion_Serie_de_TV-672348474-large.jpg",
+        img: "https://m.media-amazon.com/images/M/MV5BMTc4YTY0MDUtYWNmMi00NTRiLWE4NmItM2JiMmIzYmEwNGQzXkEyXkFqcGdeQXVyNTkwNzYyODM@._V1_.jpg",
         date: "1995 - 1996",
         duracion: "26 episodios",
         categoria: "Series",
@@ -82,7 +82,7 @@ export const ANIME = [
     {
         id: "9",
         name: "Weathering With You",
-        img: "https://pics.filmaffinity.com/El_tiempo_contigo-616038056-large.jpg",
+        img: "https://static.wikia.nocookie.net/makoto-shinkai/images/5/56/Tenki_no_Ko_imagen_promocional.png/revision/latest/scale-to-width-down/750?cb=20190905023218&path-prefix=es",
         date: "2019",
         duracion: "1h 54m",
         categoria: "Peliculas",
@@ -152,7 +152,7 @@ export const ANIME = [
     {
         id: "16",
         name: "Vinland Saga",
-        img: "https://pics.filmaffinity.com/Vinland_Saga_Serie_de_TV-969782218-large.jpg",
+        img: "https://es.web.img3.acsta.net/pictures/19/09/16/17/09/4903250.jpg",
         date: "2019 - Actualidad",
         duracion: "48 episodios",
         categoria: "Trending",
@@ -172,7 +172,7 @@ export const ANIME = [
     {
         id: "18",
         name: "Star Wars: Visions",
-        img: "https://pics.filmaffinity.com/Star_Wars_Visions_Miniserie_de_TV-926303259-large.jpg",
+        img: "https://m.media-amazon.com/images/I/81auDdxbIRL._AC_UF894,1000_QL80_.jpg",
         date: "2021 - Actualidad",
         duracion: "18 episodios",
         categoria: "Series",
@@ -198,5 +198,105 @@ export const ANIME = [
         categoria: "Series",
         descripcion: "En una realidad distópica repleta de corrupción e implantes cibernéticos, un joven talentoso e impulsivo intenta convertirse en un mercenario.",
         rating: "8.3/10"
+    },
+    { 
+        id: "21",
+        name: "One Piece",
+        img: "https://areajugones.sport.es/wp-content/uploads/2019/09/OnePiecePoster.jpg",
+        date: "1999 - Actualidad",
+        duracion: "1074 episodios",
+        categoria: "Series",
+        descripcion: "Sigue las aventuras de Monkey D. Luffy y su tripulación de piratas para encontrar el mayor tesoro jamás dejado por el legendario pirata Gold Roger, el famoso tesoro misterioso llamado One Piece.",
+        rating: "8.9/10"
+    },
+    { 
+        id: "22",
+        name: "Jujutsu Kaisen",
+        img: "https://static.wikia.nocookie.net/jujutsu-kaisen/images/f/f6/JJK_New_Key_Visual.jpg/revision/latest?cb=20200914020414&path-prefix=es",
+        date: "2020 - Actualidad",
+        duracion: "25 episodios",
+        categoria: "Trending",
+        descripcion: "Un niño se traga un talismán maldito (el dedo de un demonio) y se maldice a sí mismo. Entra en la escuela de un chamán para poder localizar las otras partes del cuerpo del demonio y así exorcizarse a sí mismo.",
+        rating: "8.5/10"
+    },
+    { 
+        id: "23",
+        name: "Black Clover",
+        img: "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/e108ae17d8d0407417cac40eb52d849a.jpe",
+        date: "2017 - 2021",
+        duracion: "170 episodios",
+        categoria: "Series",
+        descripcion: "Asta y Yuno fueron abandonados juntos en la misma iglesia y han sido inseparables desde entonces. Cuando eran niños, prometieron que competirían entre sí para ver quién se convertiría en el próximo Emperador Magus.",
+        rating: "8.3/10"
+    },
+    { 
+        id: "24",
+        name: "Oshi No Ko",
+        img: "https://i.blogs.es/351885/oshi-no-ko_temporada-2/450_1000.jpeg",
+        date: "2023 - Actualidad",
+        duracion: "11 episodios",
+        categoria: "Trending",
+        descripcion: "Un médico recientemente fallecido y su paciente, renacen como hijos gemelos de una famosa ídolo musical japonesa y atraviesan los altibajos de la industria japonesa del entretenimiento.",
+        rating: "8.7/10"
+    }, 
+    { 
+        id: "25",
+        name: "A Silent Voice",
+        img: "https://es.web.img2.acsta.net/pictures/18/01/29/13/26/1361527.jpg",
+        date: "2016",
+        duracion: "2h 10m",
+        categoria: "Peliculas",
+        descripcion: "Un joven es condenado al ostracismo por sus compañeros de clase tras intimidar a una chica sorda hasta el punto de hacerla cambiar de escuela. Años más tarde, emprende el camino hacia la redención.",
+        rating: "8.1/10"
+    },
+    { 
+        id: "26",
+        name: "I Want to Eat Your Pancreas",
+        img: "https://m.media-amazon.com/images/M/MV5BNDM4MWE3NGQtODlkYS00NWU5LTg3ZjMtMTEyNjljOWI4NWIxXkEyXkFqcGdeQXVyNzkzODk2Mzc@._V1_.jpg",
+        date: "2018",
+        duracion: "1h 49m",
+        categoria: "Peliculas",
+        descripcion: "Un joven se enamora de una compañera de clase que sufre una letal enfermedad pancreática.",
+        rating: "8.0/10"
+    },
+    { 
+        id: "27",
+        name: "The Garden of Words",
+        img: "https://images.justwatch.com/poster/241826856/s718/el-jardin-de-las-palabras.%7Bformat%7D",
+        date: "2013",
+        duracion: "46m",
+        categoria: "Peliculas",
+        descripcion: "Un joven de 15 años y una mujer de 27 entablan relación durante un lluvioso día en el Jardín Nacional de Shinjuku Gyoen.",
+        rating: "7.4/10"
+    },
+    { 
+        id: "28",
+        name: "5 Centimeters per Second",
+        img: "https://pics.filmaffinity.com/5_centaimetros_por_segundo-710207914-large.jpg",
+        date: "2007",
+        duracion: "1h 3m",
+        categoria: "Peliculas",
+        descripcion: "Contado en tres segmentos interconectados, seguimos a un joven llamado Takaki a través de su vida durante los crudos inviernos, la frialdad de la tecnología y, finalmente, las obligaciones y responsabilidades de los adultos que convergen para poner a prueba los delicados cánones del amor.",
+        rating: "7.5/10"
+    },
+    { 
+        id: "29",
+        name: "Haikyu!!",
+        img: "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/af5f2304138a2ebe9caf5b7d0b1e2f01.jpe",
+        date: "2014 - 2020",
+        duracion: "89 episodios",
+        categoria: "Series",
+        descripcion: "Hinata, alumno de secundaria, decide meterse en el equipo de vóley tras ver un partido en la tele. Nada lo detendrá, ni siquiera su corta estatura.",
+        rating: "8.7/10"
+    },
+    { 
+        id: "30",
+        name: "Chainsaw Man",
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/399/159/products/chainsawman051-f3d026b6bb978b751116238534096378-640-0.webp",
+        date: "2022 - Actualidad",
+        duracion: "12 episodios",
+        categoria: "Trending",
+        descripcion: "Tras una traición, un joven dado por muerto renace como un poderoso híbrido demonio-humano tras mezclarse con su demonio mascota y pronto se alista en una organización dedicada a la caza de demonios.",
+        rating: "8.5/10"
     },
 ]
